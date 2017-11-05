@@ -3,12 +3,16 @@
 Flights list with carrier filter
 
 ## Requirements
-Node и npm
+```Node``` и ```npm```
 
 ## Quick start
 
 ```
 npm i;
 npm start;
+```
 
+## Tests
+```
+npm tests
 ```

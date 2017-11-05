@@ -1,6 +1,6 @@
 # Flights list
 
-Flight list with carrier filter
+Flights list with carrier filter
 
 ## Requirements
 Node и npm

@@ -1,11 +1,11 @@
 # Flights list
 
-Список перелетов с фильтрацией по авиакомпаниям
+Flight list with carrier filter
 
-## Необходимы
+## Requirements
 Node и npm
 
-##Запуск 
+## Quick start
 
 ```
 npm i;

@@ -6,7 +6,7 @@ import createStore from '../../store';
 
 const store = createStore({carrier: 'all'});
 
-const App = () => (
+const Root = () => (
     <Provider store={store}>
         <Router>
             <Route path="/" component={Home}/>
@@ -14,4 +14,4 @@ const App = () => (
     </Provider>
 );
 
-export default App;
+export default Root;

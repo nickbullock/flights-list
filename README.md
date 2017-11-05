@@ -1,2 +1,14 @@
-# flights-list
-List of flights with airline filter
+# Flights list
+
+Список перелетов с фильтрацией по авиакомпаниям
+
+## Необходимы
+Node и npm
+
+##Запуск 
+
+```
+npm i;
+npm start;
+
+```

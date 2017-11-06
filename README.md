@@ -14,5 +14,5 @@ npm start;
 
 ## Tests
 ```
-npm tests
+npm test
 ```

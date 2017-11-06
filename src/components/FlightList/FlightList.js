@@ -8,22 +8,31 @@ class FlightList extends Component {
         super(props);
 
         this.filterFlightsByCarrier = this.filterFlightsByCarrier.bind(this);
+        this.state = {
+            visibleFlightList: props.flightList,
+            carrier: props.carrier
+        };
     }
 
-    filterFlightsByCarrier(carrier) {
-        if(!carrier) return [];
+    filterFlightsByCarrier(props) {
+        if(!props.carrier || !props.flightList) return [];
 
-        return carrier === 'all'
-            ? this.props.flightList
-            : this.props.flightList.filter(f => f.carrier === this.props.carrier)
+        return props.carrier === 'all'
+            ? props.flightList
+            : props.flightList.filter(f => f.carrier === props.carrier)
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            carrier: nextProps.carrier,
+            visibleFlightList: this.filterFlightsByCarrier(nextProps)
+        })
     }
 
     render() {
-        const flightList = this.filterFlightsByCarrier(this.props.carrier);
-
         return (
             <FlightListStyled>
-                {flightList.map(flight => <FlightCard key={Math.random()} flight={flight}/>)}
+                {this.state.visibleFlightList.map(flight => <FlightCard key={Math.random()} flight={flight}/>)}
             </FlightListStyled>
         );
     }

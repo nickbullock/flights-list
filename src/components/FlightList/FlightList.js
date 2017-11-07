@@ -9,8 +9,7 @@ class FlightList extends Component {
 
         this.filterFlightsByCarrier = this.filterFlightsByCarrier.bind(this);
         this.state = {
-            visibleFlightList: props.flightList,
-            carrier: props.carrier
+            visibleFlightList: props.flightList
         };
     }
 
@@ -24,7 +23,6 @@ class FlightList extends Component {
 
     componentWillReceiveProps(nextProps) {
         this.setState({
-            carrier: nextProps.carrier,
             visibleFlightList: this.filterFlightsByCarrier(nextProps)
         })
     }
